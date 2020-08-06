@@ -14,6 +14,13 @@
 
   <body>
 
+    <img src="{{ url_for('static', filename='logo.svg') }}" id="logo">
+
+    <h1>What are you drinking tonight?</h1>
+
+    <a class="next" href="{{ url_for('') }}">Start mixing</a>
+
+    <img  src="{{ url_for('static', filename='arrow.svg') }}" id="arrow" >
 
   </body>
 
