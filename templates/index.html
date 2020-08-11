@@ -14,13 +14,15 @@
 
   <body>
 
-    <img src="{{ url_for('static', filename='logo.svg') }}" id="logo">
+    <img  />
 
-    <h1>What are you drinking tonight?</h1>
+    <div id="ageconfirm">
 
-    <a class="next" href="{{ url_for('') }}">Start mixing</a>
+      <h1>Are you of legal drinking age?</h1>
+      <a class="agebutton" href="{{ url_for('') }}">Yes</a>
+      <a class="agebutton" href="{{ url_for('') }}">No</a>
 
-    <img  src="{{ url_for('static', filename='arrow.svg') }}" id="arrow" >
+    </div>
 
   </body>
 
