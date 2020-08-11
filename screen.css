@@ -5,15 +5,87 @@
 /* tag selectors */
 body {
   background-color: #f0afaf ;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 /* id selectors*/
+#ageconfirm {
+  margin: auto;
+  background-color: #f2c2c2;
+  width: 930px;
+  height: 200px;
+  text-align: center;
+  padding: 60px 0 60px 0;
+}
+
+#homescreen {
+  display: grid;
+  height: 800px;
+  background-image: url(static/background.png);
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-template-columns: 35% 65%;
+}
+
+#introtext {
+  font-family: 'Calistoga', cursive;
+  color: #150140;
+  text-align: right;
+  font-weight: normal;
+  font-size: 8em;
+  padding-right: 25px;
+  padding: 20;
+  margin: 10px;
+
+}
 
 /* class selectors*/
-#logo {
-  width: 126px;
+.logo {
+  width: 110px;
+  padding: 20px;
+}
+
+.next {
+  text-decoration: none;
+  color: #150140;
+  grid-column-start: 2;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 100px;
 }
 
 /* descendant selectors */
+
+.next h2 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0;
+  padding-right: 320px;
+}
+
+.next img {
+  float: right;
+}
+
+#ageconfirm h1 {
+  font-family: 'Calistoga', cursive;
+  color: #150140;
+  font-size: 3em;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+#ageconfirm a {
+  text-decoration: none;
+  color: white;
+  background-color: #f27a83;
+  font-size: 1.5em;
+  padding: 20px 130px 20px 130px;
+  margin: 20px;
+  border-radius: 35px;
+}
 
 /* media query */
