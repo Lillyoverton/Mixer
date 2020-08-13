@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}212 Burgers{% endblock %}
+
+{% block content %}
+  <div id="body">
+
+    <img src="{{ url_for('static', filename='logo.png') }} class="logo">
+
+    <div id="ageconfirm">
+      <h2>Are you of legal drinking age?</h2>
+      <a href="{{url_for('home') }}">Yes</a>
+      <a href="">Yes</a>
+    </div>
+
+  </div>
+
+{% endblock %}

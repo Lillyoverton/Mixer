@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Mixer{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <style>
+
+  </style>
+{% endblock %}
+
+{% block content %}
+
+    <div id="homescreen">
+      <img src="static/logo.png" class="logo">
+      <p id="introtext">What are <br> you drinking tonight?</p>
+
+      <a class="next" href="{{url_for('ingredients') }}">
+        <h2>Start mixing</h2>
+        <img src="static/arrow.png" class="arrowright"/>
+      </a>
+
+    </div>
+
+{% endblock %}
+
+  </body>

@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
+{% block title %}Mixer{% endblock %}
 
-  <head>
+{% block head %}
+  {{ super() }}
+  <style>
 
-    <meta charset="utf-8">
-    <title>Mixer</title>
-    <meta name="description" content="Mix cocktails from ingredients you already have" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="screen.css" />
-  </head>
+  </style>
+{% endblock %}
 
-  <body>
+{% block content %}
+
+  <div id"body">
 
     <div class="header">
         <img src="static/logo.png" class="logo">
@@ -20,6 +20,11 @@
 
     <div class="ingredients-light">
       <h1>Spirits*</h1>
+      <ul class="ingredient-buttons">
+        {% for spirit in spirits %}
+        <li>{{ spirit }}</li>
+        {% endfor %}
+      </ul>
     </div>
 
     <div class="ingredients">
@@ -45,6 +50,6 @@
       </a>
     </div>
 
-  </body>
+  </div>
 
-</html>
+{% endblock %}
