@@ -27,7 +27,7 @@ h1 {
 #homescreen {
   display: grid;
   height: 800px;
-  background-image: url(static/background.png);
+  background-image: url(background.png);
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: center;

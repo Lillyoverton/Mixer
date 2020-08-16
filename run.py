@@ -14,6 +14,10 @@ spirits = [
 def index():
     return render_template ('index.html')
 
+@app.route('/accessdenied')
+def accessdenied():
+    return render_template ('accessdenied.html')
+
 @app.route('/home')
 def home():
     return render_template('home.html')
@@ -22,3 +26,7 @@ def home():
 def ingredients():
     return render_template ('ingredients.html',
                             spirits=spirits)
+
+@app.route('/drinks')
+def drinks():
+    return render_template('drinks.html')
