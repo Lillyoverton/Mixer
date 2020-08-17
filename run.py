@@ -5,15 +5,6 @@ app = Flask(__name__)
 
 INGREDIENTSDB = 'ingredients.db'
 
-spirits = [
-    'Gin',
-    'Rum',
-    'Tequila',
-    'Vodka',
-    'Whiskey',
-    'Brandy'
-]
-
 @app.route('/')
 def index():
     return render_template ('index.html')
@@ -28,6 +19,13 @@ def home():
 
 @app.route('/ingredients')
 def ingredients():
+    con = sqlite3.connect(INGREDIENTSDB)
+
+    spirits = []
+    cur = con.execute('SELECT spirit FROM spirits')
+    for row in cur:
+        spirits.append(list(row))
+
     return render_template ('ingredients.html',
                             spirits=spirits)
 

@@ -11,37 +11,44 @@
           <h1 class="title">Select the ingredients you have:</h1>
       </div>
 
-      <div class="ingredients-light">
-        <h1>Spirits*</h1>
-        <ul class="ingredient-buttons">
-          {% for spirit in spirits %}
-          <li>{{ spirit }}</li>
-          {% endfor %}
-        </ul>
+      <form action="/drinks" method="get"
+
+        <div class="ingredients-light">
+          <h1>Spirits*</h1>
+          <ul class="ingredient-buttons">
+            {% for spirit in spirits %}
+            <li>
+              <input type= "checkbox" name="{{ spirit }}"/>
+              {{ spirit }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="ingredients">
+          <h1>Wines/Liqueurs</h1>
+        </div>
+
+        <div class="ingredients-light">
+          <h1>Mixers</h1>
+        </div>
+
+        <div class="ingredients">
+          <h1>Fresh</h1>
+        </div>
+
+        <div class="ingredients-light">
+          <h1>Other</h1>
+        </div>
+
+        <div class="footer">
+          <a class="next2" href="{{url_for('drinks') }}">
+            <h2>Find your drink</h2>
+            <img src="static/arrow.png" class="arrowright"/>
+          </a>
       </div>
 
-      <div class="ingredients">
-        <h1>Wines/Liqueurs</h1>
-      </div>
-
-      <div class="ingredients-light">
-        <h1>Mixers</h1>
-      </div>
-
-      <div class="ingredients">
-        <h1>Fresh</h1>
-      </div>
-
-      <div class="ingredients-light">
-        <h1>Other</h1>
-      </div>
-
-      <div class="footer">
-        <a class="next2" href="{{url_for('drinks') }}">
-          <h2>Find your drink</h2>
-          <img src="static/arrow.png" class="arrowright"/>
-        </a>
-    </div>
+      </form>
 
   </div>
 
