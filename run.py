@@ -26,8 +26,33 @@ def ingredients():
     for row in cur:
         spirits.append(list(row))
 
+    wines = []
+    cur = con.execute('SELECT wine FROM wines')
+    for row in cur:
+        wines.append(list(row))
+
+    mixers = []
+    cur = con.execute('SELECT mixer FROM mixers')
+    for row in cur:
+        mixers.append(list(row))
+
+    freshstuff = []
+    cur = con.execute('SELECT fresh FROM freshstuff')
+    for row in cur:
+        freshstuff.append(list(row))
+
+    others = []
+    cur = con.execute('SELECT other FROM others')
+    for row in cur:
+        others.append(list(row))
+
     return render_template ('ingredients.html',
-                            spirits=spirits)
+                            spirits=spirits,
+                            wines=wines,
+                            mixers=mixers,
+                            freshstuff=freshstuff,
+                            others=others
+                            )
 
 @app.route('/drinks')
 def drinks():

@@ -18,7 +18,7 @@
           <ul class="ingredient-buttons">
             {% for spirit in spirits %}
             <li>
-              <input type= "checkbox" name="{{ spirit }}"/>
+              <input type= "radio" name="{{ spirit }}"/>
               {{ spirit }}
             </li>
             {% endfor %}
@@ -27,24 +27,60 @@
 
         <div class="ingredients">
           <h1>Wines/Liqueurs</h1>
+          <ul class="ingredient-buttons">
+            {% for wine in wines %}
+            <li>
+              <input type= "checkbox" name="{{ wine }}"/>
+              {{ wine }}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
 
         <div class="ingredients-light">
           <h1>Mixers</h1>
+          <ul class="ingredient-buttons">
+            {% for mixer in mixers %}
+            <li>
+              <input type= "checkbox" name="{{ mixer }}"/>
+              {{ mixer }}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
 
         <div class="ingredients">
           <h1>Fresh</h1>
+          <ul class="ingredient-buttons">
+            {% for fresh in freshstuff %}
+            <li>
+              <input type= "checkbox" name="{{ fresh }}"/>
+              {{ fresh }}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
 
         <div class="ingredients-light">
           <h1>Other</h1>
+          <ul class="ingredient-buttons">
+            {% for other in others %}
+            <li>
+              <input type= "checkbox" name="{{ other }}"/>
+              {{ other }}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
 
         <div class="footer">
+          <a class="goback" href="{{url_for('home') }}">
+            <h2>Home</h2>
+            <img src="static/arrowleft.png"/>
+          </a>
           <a class="next2" href="{{url_for('drinks') }}">
             <h2>Find your drink</h2>
-            <img src="static/arrow.png" class="arrowright"/>
+            <img src="static/arrow.png"/>
           </a>
       </div>
 
