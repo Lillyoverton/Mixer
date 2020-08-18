@@ -66,23 +66,6 @@ h1 {
   grid-template-columns: 2% 97%;
 }
 
-.ingredients-light {
-  background-color: #f2c2c2;
-  height: 300px;
-  font-family: 'Calistoga', cursive;
-  color: #150140;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.ingredients {
-  height: 300px;
-  font-family: 'Calistoga', cursive;
-  color: #150140;
-  text-align: center;
-  padding-top: 10px;
-}
-
 .footer {
   height: 100px;
   display: grid;
@@ -106,6 +89,32 @@ h1 {
 .footer {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+.ingredients, .ingredients-light {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0 330px 0 330px;
+}
+
+.ingredient-buttons {
+  background-color: #f27a83;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 14px 10px 14px 10px;
+  border-radius: 35px;
+  width: 150px;
+}
+
+.ingredients-light {
+  background-color: #f2c2c2;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 /* descendant selectors */
@@ -148,17 +157,37 @@ h1 {
   font-size: 2em;
 }
 
+.ingredients ul, .ingredients-light ul {
+  list-style-type: none;
+}
+
+.ingredients h1, .ingredients-light h1{
+  font-family: 'Calistoga', cursive;
+  color: #150140;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .next2 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: normal;
   margin: 0;
-  padding-right: 280px;
+  padding-right: 240px;
 }
 
 .goback h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: normal;
   margin: 0;
-  padding-left: 410px;
+  padding-left: 330px;
+}
+
+.goback img, .next2 img {
+  width: 400px;
+}
+
+.ingredients ul, .ingredients-light ul {
+  display: grid;
+  grid-template-columns: 1fr  1fr 1fr;
 }
 /* media query */

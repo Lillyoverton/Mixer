@@ -15,11 +15,11 @@
 
         <div class="ingredients-light">
           <h1>Spirits*</h1>
-          <ul class="ingredient-buttons">
+          <ul>
             {% for spirit in spirits %}
-            <li>
-              <input type= "radio" name="{{ spirit }}"/>
-              {{ spirit }}
+            <li class="ingredient-buttons">
+              <input type= "radio" name="{{ spirit[0] }}"/>
+              {{ spirit[0] }}
             </li>
             {% endfor %}
           </ul>
@@ -27,11 +27,11 @@
 
         <div class="ingredients">
           <h1>Wines/Liqueurs</h1>
-          <ul class="ingredient-buttons">
+          <ul>
             {% for wine in wines %}
-            <li>
-              <input type= "checkbox" name="{{ wine }}"/>
-              {{ wine }}
+            <li class="ingredient-buttons">
+              <input type= "checkbox" name="{{ wine[0] }}"/>
+              {{ wine[0] }}
             </li>
             {% endfor %}
           </ul>
@@ -39,11 +39,11 @@
 
         <div class="ingredients-light">
           <h1>Mixers</h1>
-          <ul class="ingredient-buttons">
+          <ul>
             {% for mixer in mixers %}
-            <li>
-              <input type= "checkbox" name="{{ mixer }}"/>
-              {{ mixer }}
+            <li class="ingredient-buttons">
+              <input type= "checkbox" name="{{ mixer[0] }}"/>
+              {{ mixer[0] }}
             </li>
             {% endfor %}
           </ul>
@@ -51,11 +51,11 @@
 
         <div class="ingredients">
           <h1>Fresh</h1>
-          <ul class="ingredient-buttons">
+          <ul>
             {% for fresh in freshstuff %}
-            <li>
-              <input type= "checkbox" name="{{ fresh }}"/>
-              {{ fresh }}
+            <li class="ingredient-buttons">
+              <input type= "checkbox" name="{{ fresh[0] }}"/>
+              {{ fresh[0] }}
             </li>
             {% endfor %}
           </ul>
@@ -63,11 +63,11 @@
 
         <div class="ingredients-light">
           <h1>Other</h1>
-          <ul class="ingredient-buttons">
+          <ul>
             {% for other in others %}
-            <li>
-              <input type= "checkbox" name="{{ other }}"/>
-              {{ other }}
+            <li class="ingredient-buttons">
+              <input type= "checkbox" name="{{ other[0] }}"/>
+              {{ other[0] }}
             </li>
             {% endfor %}
           </ul>
