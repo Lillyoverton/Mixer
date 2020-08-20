@@ -45,6 +45,10 @@ h1 {
   margin: 10px;
 }
 
+#drinksbody {
+  background-color: #ece6e9;
+}
+
 /* class selectors*/
 .logo {
   width: 110px;
@@ -115,6 +119,13 @@ h1 {
   background-color: #f2c2c2;
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+.drinkname {
+  font-family: 'Calistoga', cursive;
+  color: #150140;
+  text-align: left;
+  padding-top: 10px;
 }
 
 /* descendant selectors */

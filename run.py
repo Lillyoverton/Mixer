@@ -4,6 +4,7 @@ import sqlite3
 app = Flask(__name__)
 
 INGREDIENTSDB = 'ingredients.db'
+DRINKSDB = 'drinks.db'
 
 @app.route('/')
 def index():
