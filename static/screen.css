@@ -47,6 +47,8 @@ h1 {
 
 #drinksbody {
   background-color: #ece6e9;
+  margin: auto;
+  padding-bottom: 50px;
 }
 
 /* class selectors*/
@@ -121,39 +123,65 @@ h1 {
   padding-bottom: 1px;
 }
 
+.drinkresult {
+  font-family: 'Roboto', sans-serif;
+  color: #150140;
+  display: grid;
+}
+
 .drinkname {
   font-family: 'Calistoga', cursive;
   color: #150140;
   text-align: left;
   padding-top: 10px;
+  font-size: 2em;
 }
 
-.drinkresult {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2em;
-  color: #150140;
+.drinkheading {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+  width: 710px;
 }
 
 .skilllevel {
   font-weight: lighter;
 }
 
+.drinkbox {
+  display: grid;
+  grid-template-columns: 13% 87%;
+  margin: auto;
+}
+
 .drinkimages {
-  width: 280px;
+  width: 210px;
+  z-index: 2;
 }
 
 .skillimages {
-  width: 120px;
+  width: 100px;
 }
 
 .info {
   background-color: #f2c2c2;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 40% 60%;
+  font-size: 1.3em;
+  width: 710px;
+  z-index: 1;
+}
+
+.drinkingredients {
+  padding: 0 0 0 100px;
+  list-style-type: none;
+  margin: auto;
 }
 
 .recipe {
   font-weight: lighter;
+  width: 340px;
+  padding: 20px 10px 20px 30px;
 }
 
 /* descendant selectors */
@@ -229,4 +257,14 @@ h1 {
   display: grid;
   grid-template-columns: 1fr  1fr 1fr;
 }
+
+.drinkheading p{
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.drinkheading h1{
+  text-align: left;
+}
+
 /* media query */
