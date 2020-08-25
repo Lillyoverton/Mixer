@@ -11,7 +11,7 @@
           <h1 class="title">Select the ingredients you have:</h1>
       </div>
 
-      <form action="/drinks" method="get"
+      <form action="{{url_for('drinks') }}" method="post" id="selection_form">
 
         <div class="ingredients-light">
           <h1>Spirits*</h1>
@@ -78,7 +78,7 @@
             <h2>Home</h2>
             <img src="static/arrowleft.png"/>
           </a>
-          <a class="next2" href="{{url_for('drinks') }}">
+          <a class="next2" onclick="document.getElementById('selection_form').submit()">
             <h2>Find your drink</h2>
             <img src="static/arrow.png"/>
           </a>

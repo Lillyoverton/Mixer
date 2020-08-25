@@ -240,6 +240,7 @@ h1 {
   font-weight: normal;
   margin: 0;
   padding-right: 240px;
+  cursor: pointer;
 }
 
 .goback h2 {

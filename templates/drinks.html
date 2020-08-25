@@ -10,23 +10,23 @@
   </div>
 
   <div id="drinksbody">
+    {% for drink in matches %}
     <div class="drinkresult">
       <div class="drinkheading">
-        <h1 class="drinkname">Tequila Sunrise</h1>
-        <p>Skill: <img class="skillimages" src="static/skill2.png"> <span class="skilllevel">Abit fancy</span> </p>
+        <h1 class="drinkname">{{ drink[1] }}</h1>
+        <p>Skill: <img class="skillimages" src="static/skill{{ drink[4] }}.png"></p>
       </div>
       <div class="drinkbox">
-        <img class="drinkimages" src="static/tequilasunrise.png">
+        <img class="drinkimages" src="{{ url_for('static', filename=drink[2]) }}">
         <div class="info">
           <ul class="drinkingredients">
-            <li>Tequila</li>
-            <li>Orange juice</li>
-            <li>Grenadine</li>
+            {{ drink[3] }}
           </ul>
-          <p class="recipe">Add 60ml tequila and120ml orange juice to a glass filled with ice. Top with 10ml grenadine which should sink to the bottom, creating a layered effect</p>
+          <p class="recipe">{{ drink[5] }}</p>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 
   <div class="footer">

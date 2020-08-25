@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 
 app = Flask(__name__)
@@ -55,6 +55,34 @@ def ingredients():
                             others=others
                             )
 
-@app.route('/drinks')
+@app.route('/drinks', methods=['POST'])
 def drinks():
-    return render_template('drinks.html')
+    req_ing = []
+
+    for ingredient in request.form:
+        req_ing.append(ingredient)
+
+    con = sqlite3.connect('drinks.db')
+
+    drinks = []
+
+    cur = con.execute('SELECT * FROM drinks')
+
+    matches = []
+
+    for req in req_ing:
+
+        for row in cur:
+
+            for ing in row[3].split(','):
+                if req == ing:
+                    matches.append(list(row))
+
+    con.close()
+
+    for match in matches:
+        match[3] = match[3].split(',')
+
+    print(matches)
+
+    return render_template ('drinks.html', matches=matches)
