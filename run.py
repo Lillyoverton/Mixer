@@ -78,11 +78,9 @@ def drinks():
                 if req == ing:
                     matches.append(list(row))
 
-    con.close()
-
     for match in matches:
         match[3] = match[3].split(',')
 
-    print(matches)
+    con.close()
 
     return render_template ('drinks.html', matches=matches)

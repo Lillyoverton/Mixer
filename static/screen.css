@@ -104,12 +104,12 @@ h1 {
   text-align: center;
   margin: auto;
   margin-bottom: 10px;
-  padding: 0 330px 0 330px;
+  width: 700px;
+  padding-right: 40px;
 }
 
 .ingredient-buttons {
   background-color: #f27a83;
-  width: 200px;
   margin: auto;
   margin-bottom: 20px;
   padding: 14px 10px 14px 10px;
@@ -169,6 +169,7 @@ h1 {
   grid-template-columns: 40% 60%;
   font-size: 1.3em;
   width: 710px;
+  height: 210px;
   z-index: 1;
 }
 
@@ -233,6 +234,7 @@ h1 {
   color: #150140;
   text-align: center;
   padding-top: 10px;
+  padding-left: 45px;
 }
 
 .next2 h2 {
@@ -269,3 +271,122 @@ h1 {
 }
 
 /* media query */
+
+@media only screen and (max-width: 1230px) {
+
+  #homescreen {
+  background-size: 1200px;
+  background-position: bottom;
+  height: 750px;
+  grid-template-columns: 20% 80%;
+  }
+
+  #introtext {
+    font-size: 5.4em;
+    padding-bottom: 0px;
+    height: 80px;
+  }
+
+  .next {
+    padding-right: 30px;
+    padding-top: 0px;
+  }
+
+  .next h2 {
+    font-size: 1.5em;
+    padding-right: 200px;
+  }
+
+  .next img {
+    width: 330px;
+  }
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #homescreen {
+  background-size: 700px;
+  background-position: bottom;
+  height: 600px;
+  grid-template-columns: 20% 80%;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  #introtext {
+    font-size: 4em;
+    padding-bottom: 0px;
+    height: 80px;
+  }
+
+  .next {
+    padding-right: 30px;
+    padding-top: 0px;
+  }
+
+  .next h2 {
+    font-size: 1em;
+    padding-right: 170px;
+  }
+
+  .next img {
+    width: 255px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  #homescreen {
+    background-size: 900px;
+    height: 550px;
+  }
+
+  #introtext {
+    font-size: 3.5em;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .next img {
+    width: 210px;
+  }
+
+  .next h2 {
+    font-size: 0.9em;
+    padding-right: 135px;
+  }
+
+}
+
+@media only screen and (max-width: 510px) {
+  #homescreen {
+  background-size: 500px;
+  height: 450px;
+  grid-template-columns: 10% 90%;
+  }
+
+  #introtext {
+    font-size: 2.2em;
+    height: 0px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .next img {
+    width: 190px;
+  }
+
+  .next h2 {
+    font-size: 0.8em;
+    padding-right: 120px;
+  }
+
+}
