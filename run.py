@@ -57,29 +57,26 @@ def ingredients():
 
 @app.route('/drinks', methods=['POST'])
 def drinks():
-    req_ing = []
 
-    for ingredient in request.form:
-        req_ing.append(ingredient)
+    requested_ingredients = request.form
 
     con = sqlite3.connect('drinks.db')
 
-    drinks = []
-
     cur = con.execute('SELECT * FROM drinks')
+
+    all_drinks = []
+
+    for row in cur:
+        all_drinks.append(list(row))
 
     matches = []
 
-    for req in req_ing:
+    for drink in all_drinks:
+        drink_ingredients = drink[3].split(',')
+        if set(requested_ingredients) < set (drink_ingredients):
+            matches.append(drink)
 
-        for row in cur:
-
-            for ing in row[3].split(','):
-                if req == ing:
-                    matches.append(list(row))
-
-    for match in matches:
-        match[3] = match[3].split(',')
+    print(matches)
 
     con.close()
 

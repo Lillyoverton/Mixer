@@ -20,9 +20,10 @@
         <img class="drinkimages" src="{{ url_for('static', filename=drink[2]) }}">
         <div class="info">
           <ul class="drinkingredients">
-            <li>{{ drink[3] }}</li>
+            {% for ingredient in drink[3] %}
+              <li>{{ ingredient }}</li>
+            {% endfor %}
           </ul>
-
           <p class="recipe">{{ drink[5] }}</p>
         </div>
       </div>
