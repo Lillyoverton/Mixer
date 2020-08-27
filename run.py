@@ -78,7 +78,9 @@ def drinks():
         if set(requested_ingredients) < set (drink_ingredients):
             matches.append(drink)
 
-    print(matches)
+            print(matches)
+
+        else: print('no matches found')
 
     for match in matches:
         match[3] = match[3].split(',')
