@@ -68,16 +68,20 @@ def drinks():
 
     for row in cur:
         all_drinks.append(list(row))
+    con.close()
 
     matches = []
 
     for drink in all_drinks:
         drink_ingredients = drink[3].split(',')
+
         if set(requested_ingredients) < set (drink_ingredients):
             matches.append(drink)
 
     print(matches)
 
-    con.close()
+    for match in matches:
+        match[3] = match[3].split(',')
+
 
     return render_template ('drinks.html', matches=matches)

@@ -336,6 +336,49 @@ h1 {
     border-radius: 35px;
   }
 
+  .drinkheading p{
+    padding-top: 10px;
+    font-size: 1em;
+  }
+
+  .drinkheading h1{
+    font-size: 1.5em;
+  }
+
+  .drinkimages {
+    width: 150px;
+  }
+
+  .drinkbox {
+    grid-template-columns: 15% 85%;
+  }
+
+  .skillimages {
+    width: 50px;
+  }
+
+  .info {
+    grid-template-columns: 40% 60%;
+    font-size: 0.8em;
+    width: 400px;
+    height: 150px;
+    z-index: 1;
+  }
+
+  .drinkingredients {
+    padding: 0 0 0 90px;
+  }
+
+  .recipe {
+    font-weight: lighter;
+    width: 190px;
+    padding: 10px 10px 10px 30px;
+  }
+
+  .drinkheading {
+    width: 400px;
+  }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -413,6 +456,49 @@ h1 {
     border-radius: 35px;
   }
 
+  .drinkheading p{
+    padding-top: 10px;
+    font-size: 1em;
+  }
+
+  .drinkheading h1{
+    font-size: 1.5em;
+  }
+
+  .drinkimages {
+    width: 150px;
+  }
+
+  .drinkbox {
+    grid-template-columns: 15% 85%;
+  }
+
+  .skillimages {
+    width: 50px;
+  }
+
+  .info {
+    grid-template-columns: 40% 60%;
+    font-size: 0.8em;
+    width: 400px;
+    height: 150px;
+    z-index: 1;
+  }
+
+  .drinkingredients {
+    padding: 0 0 0 90px;
+  }
+
+  .recipe {
+    font-weight: lighter;
+    width: 190px;
+    padding: 10px 10px 10px 30px;
+  }
+
+  .drinkheading {
+    width: 400px;
+  }
+
 }
 
 @media only screen and (max-width: 510px) {
@@ -475,6 +561,7 @@ h1 {
   }
 
   .drinkheading p{
+    padding-top: 10px;
     font-size: 1em;
   }
 
@@ -486,4 +573,33 @@ h1 {
     width: 150px;
   }
 
+  .drinkbox {
+    grid-template-columns: 15% 85%;
+  }
+
+  .skillimages {
+    width: 50px;
+  }
+
+  .info {
+    grid-template-columns: 40% 60%;
+    font-size: 0.8em;
+    width: 400px;
+    height: 150px;
+    z-index: 1;
+  }
+
+  .drinkingredients {
+    padding: 0 0 0 90px;
+  }
+
+  .recipe {
+    font-weight: lighter;
+    width: 190px;
+    padding: 10px 10px 10px 30px;
+  }
+
+  .drinkheading {
+    width: 400px;
+  }
 }
